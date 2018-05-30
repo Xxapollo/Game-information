@@ -1,0 +1,35 @@
+{
+  "boardList": [
+    {
+      "title": "开放产品",
+      "description": "大型单机热游，随时随地海玩一夏！",
+      "path": "dataStatistics",
+      "saleout": false
+    },
+    {
+      "title": "品牌营销",
+      "description": "大型网络游戏，是兄弟就来砍我吧。",
+      "path": "dataforecast",
+      "saleout": false
+    },
+    {
+      "title": "使命必达",
+      "description": "方便、快捷，打开手机想玩就玩。",
+      "path": "flowAnalysis",
+      "saleout": false
+    },
+    {
+      "title": "勇攀高峰",
+      "description": "贪玩蓝月是你没有玩过的传新版本。",
+      "path": "advertisingRelease",
+      "saleout": false
+    }
+  ],
+  "login": {
+    "username": "admin",
+    "userId": 1
+  },
+  "quit": {
+    "status": 200
+  }
+}

@@ -62,7 +62,7 @@ export default {
 }
 
 .dialog-wrap {
-  position: absolute;
+  position: fixed;
   width: 40%;
   max-height: 52%;
   top: 20%;

@@ -61,6 +61,7 @@ export default {
     userErrors () {
       let errorText = ''
       let status = ''
+      let _this = this
 
       if (!/^[a-zA-Z0-9_-]{4,16}$/g.test(this.userModel)) {
         errorText = '4~16数字、字母、下划线和减号组合'
@@ -68,6 +69,11 @@ export default {
       } else {
         errorText = ''
         status = true
+      }
+
+      if (!this.userflag) {
+        errorText = ''
+        _this.userflag = true
       }
 
       return {
@@ -78,6 +84,7 @@ export default {
     phoneErrors () {
       let errorText = ''
       let status = ''
+      let _this = this
 
       if (!/^1[3|4|5|7|8][0-9]{9}$/g.test(this.phoneModel)) {
         errorText = '手机号码格式不正确'
@@ -85,6 +92,11 @@ export default {
       } else {
         errorText = ''
         status = true
+      }
+
+      if (!this.phoneflag) {
+        errorText = ''
+        _this.phoneflag = true
       }
 
       return {
@@ -95,6 +107,7 @@ export default {
     emailErrors () {
       let errorText = ''
       let status = ''
+      let _this = this
 
       if (!/^([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|_|.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/g.test(this.emailModel)) {
         errorText = '邮箱格式不正确'
@@ -102,6 +115,11 @@ export default {
       } else {
         errorText = ''
         status = true
+      }
+
+      if (!this.emailflag) {
+        errorText = ''
+        _this.emailflag = true
       }
 
       return {
@@ -112,6 +130,7 @@ export default {
     passwordErrors () {
       let errorText = ''
       let status = ''
+      let _this = this
 
       if (!/^[a-zA-Z\d]{6,8}$/g.test(this.passwordModel)) {
         errorText = '6~8位数字字母组合'
@@ -119,6 +138,11 @@ export default {
       } else {
         errorText = ''
         status = true
+      }
+
+      if (!this.passwordflag) {
+        errorText = ''
+        _this.passwordflag = true
       }
 
       return {

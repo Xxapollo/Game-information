@@ -11,7 +11,7 @@
           购买数量：
         </div>
         <div class="selas-board-line-right">
-
+          <Vcounter :max="30" :min="1" @on-change="showCou"></Vcounter>
         </div>
       </div>
       <div class="selas-board-line">
@@ -19,7 +19,7 @@
           产品类型：
         </div>
         <div class="selas-board-line-right">
-
+          <Vselection :selections="productTypes" @on-change="showIndex"></Vselection>
         </div>
       </div>
       <div class="selas-board-line">
@@ -68,8 +68,38 @@
 </template>
 
 <script>
-export default {
+import Vselection from '../../components/selection'
+import Vcounter from '../../components/counter'
 
+export default {
+  components: {
+    Vselection,
+    Vcounter
+  },
+  data () {
+    return {
+      productTypes: [{
+        label: '入门版',
+        value: 0
+      },
+      {
+        label: '中级版',
+        value: 1
+      },
+      {
+        label: '高级版',
+        value: 2
+      }]
+    }
+  },
+  methods: {
+    showIndex (index) {
+      console.log(index)
+    },
+    showCou (num) {
+      console.log(num)
+    }
+  }
 }
 </script>
 

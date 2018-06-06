@@ -23,7 +23,7 @@ export default {
   },
   data () {
     return {
-      nowIndexes: [0, 1, 2]
+      nowIndexes: [0]
     }
   },
   methods: {
@@ -36,7 +36,11 @@ export default {
         })
       }
 
-      this.$emit('on-change', this.nowIndexes)
+      let nowObjArr = _.map(this.nowIndexes, (idx) => {
+        return this.selections[idx]
+      })
+
+      this.$emit('on-change', nowObjArr)
     },
     checkActive (index) {
       return this.nowIndexes.indexOf(index) !== -1

@@ -27,7 +27,7 @@ export default {
   methods: {
     chooseSelection (index) {
       this.nowIndex = index
-      this.$emit('on-change', this.nowIndex)
+      this.$emit('on-change', this.selections[index])
     }
   }
 }

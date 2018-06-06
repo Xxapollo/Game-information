@@ -38,7 +38,7 @@ export default {
     chooseSelection (index) {
       this.isDrop = false
       this.nowIndex = index
-      this.$emit('on-change', this.nowIndex)
+      this.$emit('on-change', this.selections[this.nowIndex])
     }
   }
 }

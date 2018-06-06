@@ -11,7 +11,7 @@
           购买数量：
         </div>
         <div class="selas-board-line-right">
-          <Vcounter :max="30" :min="1" @on-change="showCou"></Vcounter>
+          <Vcounter :max="30" :min="1" @on-change="onParamChange('buyNum', $event)"></Vcounter>
         </div>
       </div>
       <div class="selas-board-line">
@@ -19,7 +19,7 @@
           产品类型：
         </div>
         <div class="selas-board-line-right">
-          <Vselection :selections="productTypes" @on-change="showIndex"></Vselection>
+          <Vselection :selections="productTypes" @on-change="onParamChange('buyType', $event)"></Vselection>
         </div>
       </div>
       <div class="selas-board-line">
@@ -27,7 +27,7 @@
           有效时间：
         </div>
         <div class="selas-board-line-right">
-          半年
+          <Vchoose :selections="validTime" @on-change="onParamChange('buyTime', $event)"></Vchoose>
         </div>
       </div>
       <div class="selas-board-line">
@@ -35,7 +35,7 @@
           总价：
         </div>
         <div class="selas-board-line-right">
-          500元
+          {{ amout }}元
         </div>
       </div>
       <div class="selas-board-line">
@@ -68,16 +68,23 @@
 </template>
 
 <script>
+import _ from 'lodash'
 import Vselection from '../../components/selection'
 import Vcounter from '../../components/counter'
+import Vchoose from '../../components/choose'
 
 export default {
   components: {
     Vselection,
-    Vcounter
+    Vcounter,
+    Vchoose
   },
   data () {
     return {
+      buyNum: 0,
+      buyType: {},
+      buyTime: {},
+      amout: 0,
       productTypes: [{
         label: '入门版',
         value: 0
@@ -89,16 +96,48 @@ export default {
       {
         label: '高级版',
         value: 2
+      }],
+      validTime: [{
+        label: '半年',
+        value: 0
+      },
+      {
+        label: '一年',
+        value: 1
+      },
+      {
+        label: '三年',
+        value: 2
       }]
     }
   },
   methods: {
-    showIndex (index) {
-      console.log(index)
+    onParamChange (attr, val) {
+      this[attr] = val
+      this.getPrice()
     },
-    showCou (num) {
-      console.log(num)
+    getPrice () {
+      let buyVersionsArr = _.map(this.buyVersions, (item) => {
+        return item.value
+      })
+      let reqParam = {
+        buyNum: this.buyNum,
+        buyType: this.buyType.value,
+        buyTime: this.buyTime.value,
+        buyVersions: buyVersionsArr.join(',')
+      }
+      this.$http.get('/api/getPrice', reqParam).then((res) => {
+        this.amout = res.body.data.amout
+      }, (err) => {
+        console.log(err)
+      })
     }
+  },
+  mounted () {
+    this.buyNum = 0
+    this.buyType = this.productTypes[0]
+    this.buyTime = this.validTime[0]
+    this.getPrice()
   }
 }
 </script>

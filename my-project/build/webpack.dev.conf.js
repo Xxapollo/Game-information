@@ -17,6 +17,7 @@ const appData = require('./db.json')
 const board= appData.boardList
 const login= appData.login
 const quit= appData.quit
+const getPrice= appData.getPrice
 const apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 
@@ -67,6 +68,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       app.get('/api/quit', (req, res) => {
         res.json({
           data: quit
+        })
+      }),
+      app.get('/api/getPrice', (req, res) => {
+        res.json({
+          data: getPrice
         })
       })
     }

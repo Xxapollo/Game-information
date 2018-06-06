@@ -31,5 +31,8 @@
   },
   "quit": {
     "status": 200
+  },
+  "getPrice": {
+    "amout": 678
   }
 }

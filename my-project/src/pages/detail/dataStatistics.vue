@@ -69,9 +69,9 @@
 
 <script>
 import _ from 'lodash'
-import Vselection from '../../components/selection'
-import Vcounter from '../../components/counter'
-import Vchoose from '../../components/choose'
+import Vselection from '../../components/base/selection'
+import Vcounter from '../../components/base/counter'
+import Vchoose from '../../components/base/choose'
 
 export default {
   components: {

@@ -56,8 +56,8 @@
 
 <script>
 import _ from 'lodash'
-import Vchoose from '../../components/choose'
-import Vcounter from '../../components/counter'
+import Vchoose from '../../components/base/choose'
+import Vcounter from '../../components/base/counter'
 
 export default {
   components: {

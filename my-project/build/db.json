@@ -34,5 +34,11 @@
   },
   "getPrice": {
     "amout": 678
+  },
+  "createOrder": {
+    "orderId": "2018001123"
+  },
+  "checkOrder": {
+    "status": 0
   }
 }

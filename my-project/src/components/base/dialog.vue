@@ -26,6 +26,7 @@ export default {
     }
   },
   methods: {
+    // 关闭
     closemyself () {
       this.$emit('on-close')
     }
@@ -86,8 +87,8 @@ export default {
 
 .dialog-close {
   position: absolute;
-  top: 22px;
-  right: 25px;
+  top: 5px;
+  right: 5px;
   font-size: 12px;
   font-weight: bold;
   cursor: pointer;

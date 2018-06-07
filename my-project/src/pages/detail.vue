@@ -138,6 +138,7 @@ export default {
 .selas-board-des {
   border-top: 20px solid #f0f2f5;
   padding: 15px 20px;
+  margin-bottom: 20px;
 }
 
 .selas-board-des p {

@@ -55,20 +55,20 @@ export default {
           list: [
             {
               title: '数据统计',
-              url: 'www.baidu.com',
+              url: 'detail/dataStatistics',
               hot: true
             },
             {
               title: '数据预测',
-              url: 'www.baidu.com'
+              url: 'detail/dataforecast'
             },
             {
               title: '流量分析',
-              url: 'www.baidu.com'
+              url: 'detail/flowAnalysis'
             },
             {
               title: '广告发布',
-              url: 'www.baidu.com'
+              url: 'detail/advertisingRelease'
             }
           ]
         },
@@ -78,20 +78,20 @@ export default {
           list: [
             {
               title: '91助手',
-              url: 'www.baidu.com'
+              url: 'detail/dataStatistics'
             },
             {
               title: '产品助手',
-              url: 'www.baidu.com',
+              url: 'detail/dataforecast',
               hot: true
             },
             {
               title: '智能地图',
-              url: 'www.baidu.com'
+              url: 'detail/advertisingRelease'
             },
             {
               title: '团队语音',
-              url: 'www.baidu.com'
+              url: 'detail/flowAnalysis'
             }
           ]
         }
@@ -101,35 +101,35 @@ export default {
         list: [
           {
             title: '某主播被实锤开挂',
-            url: 'www.baidu.com'
+            url: 'javascript:void(0);'
           },
           {
             title: '五五开生前也是个体面人',
-            url: 'www.baidu.com'
+            url: 'javascript:void(0);'
           },
           {
             title: '卢姥爷和UU婊分手',
-            url: 'www.baidu.com'
+            url: 'javascript:void(0);'
           },
           {
             title: '灭霸外挂一键灭队吃鸡',
-            url: 'www.baidu.com'
+            url: 'javascript:void(0);'
           },
           {
             title: '呆妹老女人没有胸',
-            url: 'www.baidu.com'
+            url: 'javascript:void(0);'
           },
           {
             title: '恭喜RNG获得MSI世界总冠军',
-            url: 'www.baidu.com'
+            url: 'javascript:void(0);'
           },
           {
             title: '小狗UZI被评为世界第一AD',
-            url: 'www.baidu.com'
+            url: 'javascript:void(0);'
           },
           {
             title: '拳头老总推特发布某高校男生宿舍夺冠狂欢',
-            url: 'www.baidu.com'
+            url: 'javascript:void(0);'
           }
         ]
       },

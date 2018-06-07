@@ -18,6 +18,8 @@ const board= appData.boardList
 const login= appData.login
 const quit= appData.quit
 const getPrice= appData.getPrice
+const createOrder = appData.createOrder
+const checkOrder = appData.checkOrder
 const apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 
@@ -73,6 +75,16 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       app.get('/api/getPrice', (req, res) => {
         res.json({
           data: getPrice
+        })
+      }),
+      app.post('/api/createOrder', (req, res) => {
+        res.json({
+          data: createOrder
+        })
+      }),
+      app.post('/api/checkOrder', (req, res) => {
+        res.json({
+          data: checkOrder
         })
       })
     }
